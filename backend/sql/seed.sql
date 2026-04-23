@@ -4,7 +4,7 @@ VALUES
         '11111111-1111-1111-1111-111111111111',
         'Rubel Ahmed',
         'rubel@example.com',
-        '$2b$12$demoPasswordHashReplaceDuringBackendPhase',
+        '$argon2id$v=19$m=65536,t=3,p=4$hjtNCMChhQ677k7FTH6RZQ$2jr4q9iFMarqjwYYmxhMUbATpuyZuDmeR8c7r5B41U4',
         'user',
         now() - interval '14 days',
         now() - interval '14 days'
@@ -13,7 +13,7 @@ VALUES
         '22222222-2222-2222-2222-222222222222',
         'Admin Reviewer',
         'admin@example.com',
-        '$2b$12$demoPasswordHashReplaceDuringBackendPhase',
+        '$argon2id$v=19$m=65536,t=3,p=4$hjtNCMChhQ677k7FTH6RZQ$2jr4q9iFMarqjwYYmxhMUbATpuyZuDmeR8c7r5B41U4',
         'admin',
         now() - interval '20 days',
         now() - interval '20 days'

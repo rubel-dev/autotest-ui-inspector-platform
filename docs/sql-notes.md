@@ -225,4 +225,4 @@ LIMIT $2;
 
 ## Seed Data Notes
 
-The seed data uses fixed UUIDs so tests and documentation can reference stable records. Password hashes are placeholders and should be replaced with real bcrypt hashes during backend implementation or test fixture setup.
+The seed data uses fixed UUIDs so tests and documentation can reference stable records. Demo users use an Argon2 hash for `DemoPass123!`, matching the Phase 3 backend password hashing strategy.

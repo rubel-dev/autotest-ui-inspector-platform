@@ -1,0 +1,29 @@
+[project]
+name = "autotest-ui-inspector-backend"
+version = "0.1.0"
+description = "FastAPI backend for AutoTest UI Inspector Platform"
+requires-python = ">=3.12"
+dependencies = [
+    "asyncpg>=0.30.0",
+    "email-validator>=2.2.0",
+    "fastapi>=0.115.0",
+    "pydantic-settings>=2.7.0",
+    "pwdlib[argon2]>=0.2.1",
+    "python-jose[cryptography]>=3.3.0",
+    "uvicorn[standard]>=0.34.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx>=0.28.0",
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.25.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["app/tests"]
+asyncio_mode = "auto"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
