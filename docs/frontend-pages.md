@@ -312,6 +312,23 @@ Requirements:
 - Mutations refresh relevant lists.
 - Auth failure redirects to `/login`.
 
+## Phase 4 Implementation Notes
+
+The first Next.js frontend slice has been implemented under `frontend/` with the App Router, TypeScript, Tailwind CSS, and reusable dashboard components.
+
+Implemented route groups:
+
+- Public auth routes: `/login`, `/register`.
+- Protected dashboard routes: `/dashboard`, `/projects`, `/projects/[id]`, `/test-cases`, `/test-cases/[id]`, `/test-runs`, `/logs`, `/analytics`, `/settings`.
+
+Current API integration:
+
+- Auth screens call the real backend contracts for register and login.
+- Project list, create, and detail screens call the real backend project APIs.
+- Test cases, test runs, logs, analytics, and settings use typed frontend data so the UI can be built and reviewed before those backend modules are completed.
+
+The protected dashboard uses a client-side auth gate because the Phase 3 backend returns a bearer token that is currently stored by the frontend auth utility. Later production hardening can move token handling to httpOnly cookies if desired.
+
 ## Visual Quality Checklist
 
 - Consistent spacing scale.
